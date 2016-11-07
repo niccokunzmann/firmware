@@ -154,7 +154,7 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
  [ -f /etc/config/olsrd ] && cfgs="olsrd"
  [ -f /etc/config/olsrd6 ] && cfgs="$cfgs olsrd6"
  
-@@ -92,6 +92,8 @@ add_lookup_rule() {
+@@ -103,6 +103,8 @@ add_lookup_rule() {
  	name=${1/-/_}
  	lookup=$2
  	prio=$3
@@ -163,7 +163,7 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
  
  	if [ -z "$name" -o -z "$lookup" -o -z "$prio" ]; then
  		logger -s -t policyrouting "Missing parameters for add_rule!"
-@@ -102,21 +104,57 @@ add_lookup_rule() {
+@@ -113,21 +115,57 @@ add_lookup_rule() {
  			else
  				rule="rule"
  			fi
@@ -179,19 +179,19 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
 +		done
 +	fi
 +}
-+
-+add_action_rule() {
-+	name=${1/-/_}
-+	action=$2
-+	prio=$3
-+	in=$4
-+	name=$name"_"${in:-allif}"_"
  
 -			uci batch <<- EOF
 -				set network.${name}ipv${p}="$rule"
 -				set network.${name}ipv${p}.lookup="$lookup"
 -				set network.${name}ipv${p}.priority="$prio"
 -			EOF
++add_action_rule() {
++	name=${1/-/_}
++	action=$2
++	prio=$3
++	in=$4
++	name=$name"_"${in:-allif}"_"
++
 +	if [ -z "$name" -o -z "$action" -o -z "$prio" ]; then
 +		logger -s -t policyrouting "Missing parameters for add_action!"
 +	else
@@ -227,7 +227,7 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
  }
  
  start() {
-@@ -124,7 +162,7 @@ start() {
+@@ -135,7 +173,7 @@ start() {
  		logger -s -t policyrouting "Starting policy routing."
  		rt_tables
  		olsrd_intalltables
@@ -236,7 +236,7 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
  
  		add_lookup_rule olsr olsr 1000
  		add_lookup_rule localnets localnets 2000
-@@ -132,6 +170,26 @@ start() {
+@@ -143,6 +181,26 @@ start() {
  		if [ "$fallback" = 1 ]; then
  			add_lookup_rule olsr-default olsr-default 100000
  		fi
@@ -263,7 +263,7 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/files/etc/init.
  	fi
  	uci commit network
  	if [ ! "$1" = "noservicerestart" ]; then
-@@ -142,20 +200,33 @@ start() {
+@@ -153,20 +211,33 @@ start() {
  stop() {
  	logger -s -t policyrouting "Stopping policy routing"
  	olsrd_rmtables
@@ -318,3 +318,4 @@ Index: openwrt/feeds/luci/contrib/package/freifunk-policyrouting/Makefile
 +PKG_RELEASE:=7
  
  PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
+ 

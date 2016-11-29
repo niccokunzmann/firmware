@@ -4,3 +4,4 @@ patches/*~
 bin
 openwrt
 firmwares
+/zsun-fw-tools

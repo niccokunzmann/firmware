@@ -1,7 +1,7 @@
--ppp
--ppp-mod-pppoe
+ppp
+ppp-mod-pppoe
 -wpad-mini
-wpad
+-wpad
 
 # Defaults
 freifunk-berlin-dhcp-defaults
@@ -70,3 +70,6 @@ collectd-mod-rrdtool
 collectd-mod-ping
 collectd-mod-uptime
 collectd-mod-memory
+
+#VPN
+openvpn-openssl

@@ -63,7 +63,6 @@ batctl
 luci-app-statistics
 collectd
 collectd-mod-interface
-collectd-mod-iwinfo
 collectd-mod-network
 collectd-mod-olsrd
 collectd-mod-rrdtool

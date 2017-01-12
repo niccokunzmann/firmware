@@ -22,8 +22,8 @@ iperf
 tmux
 vnstat
 ethtool
-iwinfo
-libiwinfo-lua
+#iwinfo
+#libiwinfo-lua
 
 # GUI-basics
 uhttpd
@@ -32,7 +32,7 @@ luci-mod-freifunk-ui
 luci-app-olsr
 luci-app-olsr-services
 luci-app-owm
-luci-app-owm-ant
+#luci-app-owm-ant
 luci-app-owm-cmd
 luci-app-owm-gui
 luci-theme-bootstrap

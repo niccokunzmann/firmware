@@ -16,8 +16,11 @@ IB_BUILD_DIR=$(FW_DIR)/imgbldr_tmp
 FW_TARGET_DIR=$(FW_DIR)/firmwares/$(MAINTARGET)-$(SUBTARGET)
 UMASK=umask 022
 
+ifeq ($(shell hostname -f),buildbot)
+IS_BUILDBOT=yes
+endif
 ifdef IS_BUILDBOT
-$(info running on buildslave, maybe special actions will apply ...)
+$(info special actions apply to builds on this host ...)
 endif
 
 # test for existing $TARGET-config or abort

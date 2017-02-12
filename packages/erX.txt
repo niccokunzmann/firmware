@@ -47,7 +47,7 @@ luci-i18n-statistics-en
 # OLSR
 olsrd
 olsrd-mod-arprefresh
-olsrd-mod-dyn-gw
+#olsrd-mod-dyn-gw
 olsrd-mod-jsoninfo
 olsrd-mod-txtinfo
 olsrd-mod-nameservice
@@ -64,9 +64,9 @@ luci-app-statistics
 collectd
 collectd-mod-interface
 collectd-mod-network
-collectd-mod-olsrd
+#collectd-mod-olsrd
 collectd-mod-rrdtool
-collectd-mod-ping
+#collectd-mod-ping
 collectd-mod-uptime
 collectd-mod-memory
 

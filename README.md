@@ -1,3 +1,17 @@
+# niccokunzmann/firmware
+
+This is a fork of the original [freifunk-berlin/firmware](https://github.com/freifunk-berlin/firmware).
+You will find updated software in branches.
+These are accompanied by [blog posts](http://niccokunzmann.github.io/essays/):
+
+- [Raspberry Pi](http://niccokunzmann.github.io/blog/2016-11-23/Freifunk-mit-Raspberry-Pi)
+- [Zsun Wifi USB stick](http://niccokunzmann.github.io/blog/2016-11-29/Freifunk-mit-zsun-wifi-sdcard-reader)
+- [3G/4G Router](http://niccokunzmann.github.io/blog/2017-03-04/Freifunk-auf-3G-Router)
+
+Original README follows.
+
+---
+
 # Freifunk Firmware Berlin "Kathleen"
 https://wiki.freifunk.net/Berlin:Firmware
 

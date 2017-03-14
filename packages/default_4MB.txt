@@ -30,7 +30,7 @@ libiwinfo-lua
 luci-theme-bootstrap
 uhttpd
 uhttpd-mod-ubus
-luci-app-ffwizard-berlin
+-luci-app-ffwizard-berlin
 luci-mod-freifunk-ui
 luci-app-olsr
 luci-app-olsr-services

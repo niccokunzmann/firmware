@@ -83,3 +83,5 @@ collectd-mod-rrdtool
 collectd-mod-ping
 collectd-mod-uptime
 collectd-mod-memory
+
+-kmod-usb2

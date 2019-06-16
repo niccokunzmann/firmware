@@ -7,6 +7,7 @@ These are accompanied by [blog posts](http://niccokunzmann.github.io/essays/):
 - [Raspberry Pi](http://niccokunzmann.github.io/blog/2016-11-23/Freifunk-mit-Raspberry-Pi)
 - [Zsun Wifi USB stick](http://niccokunzmann.github.io/blog/2016-11-29/Freifunk-mit-zsun-wifi-sdcard-reader)
 - [3G/4G Router](http://niccokunzmann.github.io/blog/2017-03-04/Freifunk-auf-3G-Router)
+- [further images](http://niccokunzmann.github.io/blog/2018-11-12/hedy-firmware-berlin-weitere-router)
 
 Original README follows.
 
